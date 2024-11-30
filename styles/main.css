@@ -8,6 +8,18 @@ main {
     max-width: 1440px;
 }
 
+#md5 {
+    padding-top: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh; /* Ocupa a altura total da janela */
+    box-sizing: border-box; /* Inclui padding e bordas no tamanho total */
+}
+
 .main__info {
     width: 100%;
     max-width: 570px;
@@ -34,10 +46,10 @@ main {
     text-transform: uppercase;
     letter-spacing: 0.3px;
     transform: skew(-10deg);
-    -webkit-transform: skew(-10deg);
-    -moz-transform: skew(-10deg);
-    -ms-transform: skew(-10deg);
-    -o-transform: skew(-10deg);
+}
+.main__info div a:hover, .main__info div button:hover {
+    transform: scale(1.05);
+    border:solid 1px #ccc;
 }
 
 .main__info div a {
