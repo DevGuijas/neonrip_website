@@ -12,12 +12,36 @@ main {
     padding-top: 10px;
     flex: 1;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 1440px;
-    height: 100vh; /* Ocupa a altura total da janela */
-    box-sizing: border-box; /* Inclui padding e bordas no tamanho total */
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+#elo_boost {
+    padding-top: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+#duo_boost {
+    padding-top: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 .main__info {
