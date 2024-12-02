@@ -1,0 +1,29 @@
+@media screen and (max-width: 1479px) {
+
+    /* Classes gerais */
+    .main_page_workspace {
+        flex-direction: column;
+    }
+
+    .main_page_workspace img {
+        width: 400px;
+    }
+
+    .main__info p {
+       padding: 20px;
+    }
+
+    .button_page {
+        display: block;
+    }
+
+    .logo_img {
+        padding-left: 10px;
+    }
+
+    /* Cabeçalho */
+    .navigation, .navigation_social {
+        display: none;
+
+    }
+}
