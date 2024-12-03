@@ -23,11 +23,10 @@
     }
 
     #background_img {
-
-
-        height: 110vh; /* Garante que o container tenha a altura da tela */
-        width: 150%; /* Faz o container preencher a largura da tela */
-        overflow: hidden; /* Evita overflow caso a imagem ultrapasse os limites */
+        align-items: center;
+        display: flex;
+        position: relative;
+        width: inherit;
     }
     /* Cabeçalho */
     .navigation, .navigation_social {
