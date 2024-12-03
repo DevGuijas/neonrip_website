@@ -1,76 +1,199 @@
 header {
-    display: flex;
-    align-items: center;
-    column-gap: 64px;
+  display: flex;
+  align-items: center;
+  column-gap: 64px;
 
-    width: 100%;
-    max-width: 1440px;
-    padding-top: 24px;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  width: 100%;
+  max-width: 1440px;
+  padding-top: 24px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+
 }
 
 header img {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 
 .navigation {
-    display: flex;
-    align-items: center;
-    column-gap: 48px;
+  display: flex;
+  align-items: center;
+  column-gap: 48px;
 
-    list-style: none;
+  list-style: none;
 }
 
 .navigation_link {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.navigation_link:hover {
+  color: var(--red);
+}
+
+.navigation_link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s;
+}
+
+.navigation_link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+
+.navigation_social {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+}
+
+.navigation_social svg {
+  width: 27px;
+  height: 27px;
+  opacity: 0.6;
+  transition: all 0.4s;
+}
+
+.navigation_social svg:hover {
+  opacity: 100%;
+  transform: translateY(-5px);
+}
+
+
+.burguer img {
+    display: none;
+  }
+  
+  .burguer {
+      display: none;
+    }
+
+@media screen and (max-width: 1280px) {
+  header {
+    justify-content: space-between;
+  }
+
+  .burguer {
+    background-color: transparent;
+    border: none;
+    display: block;
+  }
+
+  .burguer img {
+    width: 3rem;
+    height: 3rem;
+    display: block;
+  }
+}
+
+.burguer.hidden {
+    display: none;
+  }
+  
+  .modal {
+    display: flex; /* Para manter o layout consistente */
+    justify-content: flex-end;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0; /* Inicialmente invisível */
+    pointer-events: none; /* Desativa interações */
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .modal-content {
+    background-color: var(--red);
+    height: 100vh;
+    width: 50vw;
+    transform: translateX(100%); /* Inicialmente fora da tela */
+    transition: transform 0.3s ease;
+    padding-top: 3rem;
+  }
+
+  .modal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+    list-style: none;
+  }
+  
+  .modal.show .modal-content {
+    transform: translateX(0); /* Move para dentro da tela */
+  }
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1.7rem 1.2rem 0 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.close-button img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.modal_link {
     font-size: 18px;
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
-
     position: relative;
-}
-
-.navigation_link:hover {
-    color: var(--red);
-}
-
-.navigation_link::after {
-    content: '';
+    
+  }
+  
+  .modal_link:hover {
+    color: #000;
+    font-weight: 600;
+    
+  }
+  
+  .modal_link::after {
+    content: "";
     position: absolute;
     left: 0;
     bottom: -2px;
     width: 100%;
     height: 1px;
-    background: var(--red);
+    background: #000;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.4s;
-}
-
-.navigation_link:hover::after {
+  }
+  
+  .modal_link:hover::after {
     transform: scaleX(1);
     transform-origin: left;
     transition: transform 0.4s;
-}
-
-.navigation_social {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    column-gap: 24px;
-}
-
-.navigation_social svg {
-    width: 27px;
-    height: 27px;
-    opacity: 0.6;
-    transition: all 0.4s;
-}
-
-.navigation_social svg:hover {
-    opacity: 100%;
-    transform: translateY(-5px);
-
-}
+  }
