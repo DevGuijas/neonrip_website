@@ -79,7 +79,8 @@
             <h1>Preço do elo job:</h1>
             <form id="elojobForm">
                 <label for="eloAtual">Elo Atual:</label>
-                <select id="eloAtual">
+                <img class="elo-img" src="./assets/Ferro.png" alt="ferro">
+                <select id="eloAtual" class="elo-select">
                     <option value="0">Ferro 4</option>
                     <option value="1">Ferro 3</option>
                     <option value="2">Ferro 2</option>
@@ -112,6 +113,7 @@
                     <option value="29">Grão Mestre</option>
                 </select>
                 <label for="eloDesejado">Elo Desejado:</label>
+                <img class="elo-img" id="elo-desejado-img" src="./assets/Ferro.png" alt="ferro">
                 <select id="eloDesejado">
                     <option value="0">Ferro 4</option>
                     <option value="1">Ferro 3</option>
@@ -158,6 +160,7 @@
     <script>
         AOS.init();
     </script>
+        <script src="./JS/seletor-duo.js"></script>
 </body>
 
 </html>
