@@ -23,8 +23,10 @@ selectUltimoElo.addEventListener("change", (e) => {
     elos.forEach((item) => {
 
         if(item.value === valorSelecionado) {
-            ultimoElo.setAttribute("src", `../assets/${item.label}.png`);
-            ultimoElo.setAttribute("alt", item.label);
+            // ultimoElo.setAttribute("src", `../assets/${item.label}.png`);
+            ultimoElo.src = `../assets/${item.label}.png`;
+            ultimoElo.alt =  item.label;
+            // ultimoElo.setAttribute("alt", item.label);
         }
     })
 });
