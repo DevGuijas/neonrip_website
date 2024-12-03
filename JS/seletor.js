@@ -1,8 +1,8 @@
-let ultimoElo = document.querySelector(".ultimo-elo");
-let select = document.querySelector("#elo");
+let ultimoElo = document.querySelector(".elo-img");
+let selectUltimoElo = document.querySelector(".elo-select");
 
 const elos = [
-    { value: "0", label: "Unranked" },
+    { value: "0", label: "Ferro" },
     { value: "1", label: "Ferro" },
     { value: "2", label: "Bronze" },
     { value: "3", label: "Prata" },
@@ -16,7 +16,7 @@ const elos = [
 ]
 
 
-select.addEventListener("change", (e) => {
+selectUltimoElo.addEventListener("change", (e) => {
     let valorSelecionado = e.target.value;
 
     ultimoElo.textContent = valorSelecionado;
@@ -24,6 +24,7 @@ select.addEventListener("change", (e) => {
 
         if(item.value === valorSelecionado) {
             ultimoElo.setAttribute("src", `../assets/${item.label}.png`);
+            ultimoElo.setAttribute("alt", item.label);
         }
     })
 });

@@ -133,12 +133,14 @@ header img {
     width: 50vw;
     transform: translateX(100%); /* Inicialmente fora da tela */
     transition: transform 0.3s ease;
-    padding-top: 3rem;
+    padding-top: 6rem;
+    justify-content: space-between;
   }
 
   .modal-list {
     display: flex;
     flex-direction: column;
+    align-items: end;
     gap: 3rem;
     padding: 2rem;
     list-style: none;
@@ -196,4 +198,16 @@ header img {
     transform: scaleX(1);
     transform-origin: left;
     transition: transform 0.4s;
+  }
+  .modal-social {
+    display: flex;
+    padding: 1rem;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+  
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
   }
