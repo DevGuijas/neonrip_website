@@ -18,6 +18,7 @@ main {
   max-width: 1440px;
   height: 100vh;
   box-sizing: border-box;
+  margin-bottom: 300px;
 }
 
 #elo_boost {
