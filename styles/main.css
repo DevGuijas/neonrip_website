@@ -1,104 +1,105 @@
 main {
-    padding-top: 130px;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1440px;
+  padding-top: 130px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
 }
 
 #md5 {
-    padding-top: 10px;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1440px;
-    height: 100vh;
-    box-sizing: border-box;
+  padding-top: 10px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 #elo_boost {
-    padding-top: 10px;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1440px;
-    height: 100vh;
-    box-sizing: border-box;
+  padding-top: 10px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 #duo_boost {
-    padding-top: 10px;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1440px;
-    height: 100vh;
-    box-sizing: border-box;
+  padding-top: 10px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 .main__info {
-    width: 100%;
-    max-width: 570px;
+  width: 100%;
+  max-width: 570px;
 }
 
 .main__info p {
-    font-size: 18px;
-    margin: 20px 0 28px;
+  font-size: 18px;
+  margin: 20px 0 28px;
 }
 
 .main__info p::selection {
-    background-color: var(--red);
+  background-color: var(--red);
 }
-
 
 .main__info div {
-    display: flex;
-    column-gap: 32px;
+  display: flex;
+  column-gap: 32px;
 }
 
-.main__info div a, .main__info div button {
-    width: 100%;
-    padding: 10px 0;
-    border-style: 3px;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-    transform: skew(-10deg);
+.main__info div a,
+.main__info div button {
+  width: 100%;
+  padding: 10px 0;
+  border-style: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  transform: skew(-10deg);
 }
-.main__info div a:hover, .main__info div button:hover {
-    transform: scale(1.05);
-    border:solid 1px #ccc;
+.main__info div a:hover,
+.main__info div button:hover {
+  transform: scale(1.05);
+  border: solid 1px #ccc;
 }
 
 .main__info div a {
-    background: var(--red);
+  background: var(--red);
 }
 
 .main__info div button {
-    background: transparent;
-    border: 1px solid var(--red);
+  background: transparent;
+  border: 1px solid var(--red);
 }
 
 .button_page {
-    padding-right: 1rem;
+  padding-right: 1rem;
 }
 
 @media screen and (max-width: 1280px) {
-    .button_page { 
-      padding-left: 1rem;
-      padding-right: 1rem;
-      padding-bottom: 3rem;
-      margin-bottom: 2rem;
-      overflow-x: hidden;
-    }
+  .button_page {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+    overflow-x: hidden;
   }
+}
