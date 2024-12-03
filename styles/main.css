@@ -54,6 +54,11 @@ main {
     margin: 20px 0 28px;
 }
 
+.main__info p::selection {
+    background-color: var(--red);
+}
+
+
 .main__info div {
     display: flex;
     column-gap: 32px;
@@ -88,3 +93,13 @@ main {
 .button_page {
     padding-right: 1rem;
 }
+
+@media screen and (max-width: 720px) {
+    .button_page { 
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 3rem;
+      margin-bottom: 2rem;
+      overflow-x: hidden;
+    }
+  }
