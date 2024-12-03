@@ -199,7 +199,6 @@ header img {
     transform-origin: left;
     transition: transform 0.4s;
   }
-
   .modal-social {
     display: flex;
     padding: 1rem;
