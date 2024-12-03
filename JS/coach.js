@@ -21,7 +21,7 @@ function calcularCoach() {
 
     whatsappButton.style.display = 'block';
 
-    const message = `Opa, Quero contratar o Coach, o meu elo é ${eloAtualText} e quero ${quantidadeAulaText} aulas. O valor é: R$${coachPrice.toFixed(2)}`;
+    const message = `Opa! Quero contratar serviço de coach. O meu elo atual é ${eloAtualText} e quero ${quantidadeAulaText} aula(s) no valor de: R$${coachPrice.toFixed(2)}`;
     const encodedMessage = encodeURIComponent(message);
     whatsappButton.onclick = function() {
         window.open(`https://wa.me/5516997486526?text=${encodedMessage}`, '_blank');

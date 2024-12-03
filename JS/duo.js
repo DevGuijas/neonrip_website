@@ -56,7 +56,7 @@ function calcularPreco(t) {
     const eloDesejadoText = document.getElementById("eloDesejado").selectedOptions[0].text; // Texto do elo desejado
 
     // Atualiza o link do WhatsApp
-    const message = `Opa, Quero contratar DuoBoost. Meu elo atual é: ${eloAtualText} e quero chegar ao ${eloDesejadoText}, o valor é: R$${jobPrice.toFixed(2)}`;
+    const message = `Opa! Quero contratar o serviço de DuoBoost. Meu elo atual é: ${eloAtualText} e quero chegar ao ${eloDesejadoText} no valor de: R$${jobPrice.toFixed(2)}`;
     const encodedMessage = encodeURIComponent(message);
     whatsappButton.onclick = function() {
         window.open(`https://wa.me/5516997486526?text=${encodedMessage}`, '_blank');

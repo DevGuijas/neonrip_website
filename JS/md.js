@@ -21,9 +21,9 @@ function calcularMd(){
     whatsappButton.style.display = 'block';
 
     const eloAtualText = document.getElementById("elo").selectedOptions[0].text; // Texto do elo atual
-    const eloDesejadoText = document.getElementById("matches").selectedOptions[0].text; // Texto do elo desejado
+    const quantidadePartidasText = document.getElementById("matches").selectedOptions[0].text; // Texto do elo desejado
 
-    const message = `Opa, Quero contratar para MD5, meu último elo é ${eloAtualText} e quero que jogue ${eloDesejadoText} partidas, o valor é: R$${mdPrice.toFixed(2)}`;
+    const message = `Opa! Quero contratar o serviço de MD5. O meu último elo foi ${eloAtualText} e quero que jogue ${quantidadePartidasText} partida(s) no valor de: R$${mdPrice.toFixed(2)}`;
     const encodedMessage = encodeURIComponent(message);
     whatsappButton.onclick = function() {
         window.open(`https://wa.me/5516997486526?text=${encodedMessage}`, '_blank');

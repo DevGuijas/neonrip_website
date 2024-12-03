@@ -1,35 +1,4 @@
-// const ironTierPrice =       [7.5,  15];
-// const bronzeTierPrice =     [9.5,  16];
-// const silverTierPrice =     [12.5, 18];
-// const goldTierPrice =       [17,   24];
-// const platinumTierPrice =   [24.5, 40];
-// const emeraldTierPrice =    [45,   68];
-// const diamondTierPrice =    [73.5, 150.5]; 
-
-// const jobType = document.getElementById('jobType');
-
-// document.getElementById('submit').addEventListener('click', () => calcularPreco(jobType.value))
-
-// function calcularPreco(t) {
-//     const eloTierPrice = [  ironTierPrice[t], ironTierPrice[t], ironTierPrice[t], ironTierPrice[t],
-//                             bronzeTierPrice[t], bronzeTierPrice[t], bronzeTierPrice[t], bronzeTierPrice[t],
-//                             silverTierPrice[t], silverTierPrice[t], silverTierPrice[t], silverTierPrice[t], 
-//                             goldTierPrice[t], goldTierPrice[t], goldTierPrice[t], goldTierPrice[t], 
-//                             platinumTierPrice[t], platinumTierPrice[t], platinumTierPrice[t], platinumTierPrice[t], 
-//                             emeraldTierPrice[t], emeraldTierPrice[t], emeraldTierPrice[t], emeraldTierPrice[t], 
-//                             diamondTierPrice[t], diamondTierPrice[t], diamondTierPrice[t], diamondTierPrice[t], 0
-//                     ];
-
-//     const eloAtual = document.getElementById("eloAtual").value;
-//     const eloDesejado = document.getElementById("eloDesejado").value;
-
-//     const eloPath = eloTierPrice.filter((_, prices) => prices >= eloAtual && prices < eloDesejado);
-    
-//     const jobPrice = eloPath.reduce((price, tier) => price + tier, 0);
-
-//     document.getElementById("price").innerText = `Preço: R$ ${jobPrice.toFixed(2)}`; 
-// }   
-const ironTierPrice = [8, 14.3];
+  const ironTierPrice = [8, 14.3];
 const bronzeTierPrice = [9.5, 16.2];
 const silverTierPrice = [12.5, 19.3];
 const goldTierPrice = [15.1, 23.2];
@@ -87,7 +56,7 @@ function calcularPreco(t) {
     const eloDesejadoText = document.getElementById("eloDesejado").selectedOptions[0].text; // Texto do elo desejado
 
     // Atualiza o link do WhatsApp
-    const message = `Opa, Quero contratar o SoloBoost. Meu elo atual é: ${eloAtualText} e quero chegar ao ${eloDesejadoText}, o valor é: R$${jobPrice.toFixed(2)}`;
+    const message = `Opa! Quero contratar o serviço de SoloBoost. Meu elo atual é: ${eloAtualText} e quero chegar ao ${eloDesejadoText} no valor de: R$${jobPrice.toFixed(2)}`;
     const encodedMessage = encodeURIComponent(message);
     whatsappButton.onclick = function() {
         window.open(`https://wa.me/5516997486526?text=${encodedMessage}`, '_blank');

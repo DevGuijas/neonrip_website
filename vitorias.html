@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Duo Boost</title>
+    <title>Comprar vitórias</title>
     <link rel="icon" type="image/x-icon" href="./assets/FotoPerfil.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
@@ -143,80 +143,40 @@
             </div>
         </header>
 
-        <main id="duo_boost">
-            <h1>Preço do Duo Boost</h1>
+        <main id="md5">
+            <h1>Compras de vitórias</h1>
             <form id="elojobForm">
-                <label for="eloAtual">Elo Atual:</label>
+                <label for="elo">Informe seu elo:</label>
                 <img class="elo-img" src="./assets/Ferro.png" alt="ferro">
-                <select id="eloAtual" class="elo-select">
-                    <option value="0">Ferro 4</option>
-                    <option value="1">Ferro 3</option>
-                    <option value="2">Ferro 2</option>
-                    <option value="3">Ferro 1</option>
-                    <option value="4">Bronze 4</option>
-                    <option value="5">Bronze 3</option>
-                    <option value="6">Bronze 2</option>
-                    <option value="7">Bronze 1</option>
-                    <option value="8">Prata 4</option>
-                    <option value="9">Prata 3</option>
-                    <option value="10">Prata 2</option>
-                    <option value="11">Prata 1</option>
-                    <option value="12">Ouro 4</option>
-                    <option value="13">Ouro 3</option>
-                    <option value="14">Ouro 2</option>
-                    <option value="15">Ouro 1</option>
-                    <option value="16">Platina 4</option>
-                    <option value="17">Platina 3</option>
-                    <option value="18">Platina 2</option>
-                    <option value="19">Platina 1</option>
-                    <option value="20">Esmeralda 4</option>
-                    <option value="21">Esmeralda 3</option>
-                    <option value="22">Esmeralda 2</option>
-                    <option value="23">Esmeralda 1</option>
-                    <option value="24">Diamante 4</option>
-                    <option value="25">Diamante 3</option>
-                    <option value="26">Diamante 2</option>
-                    <option value="27">Diamante 1</option>
+                <select id="elo" class="elo-select">
+                    <option value="1">Ferro</option>
+                    <option value="2">Bronze</option>
+                    <option value="3">Prata</option>
+                    <option value="4">Ouro</option>
+                    <option value="5">Platina</option>
+                    <option value="6">Esmeralda</option>
+                    <option value="7">Diamante 4</option>
+                    <option value="8">Diamante 3</option>
+                    <option value="9">Diamante 2</option>
+                    <option value="10">Diamante 1</option>
+                    <option value="11">Mestre</option>
+                    <option value="12">Grão Mestre</option>
+                    <option value="13">Desafiante</option>
                 </select>
-                <label for="eloDesejado">Elo Desejado:</label>
-                <img class="elo-img" id="elo-desejado-img" src="./assets/Ferro.png" alt="ferro">
-                <select id="eloDesejado">
-                    <option value="0">Ferro 4</option>
-                    <option value="1">Ferro 3</option>
-                    <option value="2">Ferro 2</option>
-                    <option value="3">Ferro 1</option>
-                    <option value="4">Bronze 4</option>
-                    <option value="5">Bronze 3</option>
-                    <option value="6">Bronze 2</option>
-                    <option value="7">Bronze 1</option>
-                    <option value="8">Prata 4</option>
-                    <option value="9">Prata 3</option>
-                    <option value="10">Prata 2</option>
-                    <option value="11">Prata 1</option>
-                    <option value="12">Ouro 4</option>
-                    <option value="13">Ouro 3</option>
-                    <option value="14">Ouro 2</option>
-                    <option value="15">Ouro 1</option>
-                    <option value="16">Platina 4</option>
-                    <option value="17">Platina 3</option>
-                    <option value="18">Platina 2</option>
-                    <option value="19">Platina 1</option>
-                    <option value="20">Esmeralda 4</option>
-                    <option value="21">Esmeralda 3</option>
-                    <option value="22">Esmeralda 2</option>
-                    <option value="23">Esmeralda 1</option>
-                    <option value="24">Diamante 4</option>
-                    <option value="25">Diamante 3</option>
-                    <option value="26">Diamante 2</option>
-                    <option value="27">Diamante 1</option>
-                    <option value="28">Mestre</option>
+                <label for="matches">Número de vitórias:</label>
+                <select id="matches">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
-                <button id="submit" type="button">Calcular Preço</button>
+                <button id="submit" type="button" onclick="calcularVitorias()">Valor das vitórias</button>
             </form>
-            <button id="whatsappButton" style="display: none;">Conversar pelo WhatsApp</button>
+            <button id="whatsappButton" style="display: none">Conversar pelo WhatsApp</button>
             <div id="price"></div>
 
-            <script src="./JS/duo.js"></script>
+            <script src="./JS/vitorias.js"></script>
         </main>
     </div>
 
@@ -224,7 +184,6 @@
     <script>
         AOS.init();
     </script>
-    <script src="./JS/seletor-duo.js"></script>
     <script src="./JS/burguer_button.js"></script>
 </body>
 
