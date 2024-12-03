@@ -4,18 +4,19 @@
     z-index: -1;
     width: 100%;
     height: 100vh;
-
+    touch-action: none;
 }
 
 #background video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    touch-action: none;
 }
 
 #background::after {
     content: '';
-
+    touch-action: none;
 
     width: inherit;
     height: inherit;
