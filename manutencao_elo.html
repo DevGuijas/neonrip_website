@@ -144,7 +144,25 @@
         </header>
 
         <main id="md5">
-            
+            <h1>Manutenção de elos</h1>
+            <form id="elojobForm">
+                <label for="elo">Informe seu elo:</label>
+                <img class="elo-img" src="./assets/Mestre.png" alt="ferro">
+                <select id="elo" class="elo-select">
+                    <option value="1">Mestre</option>
+                    <option value="2">Grão Mestre</option>
+                    <option value="3">Desafiante</option>
+                </select>
+                <label for="matches">Número de vitórias:</label>
+                <select id="matches">
+                    <option value="1">30 dias</option>
+                </select>
+                <button id="submit" type="button" onclick="calcularManutencao()">Valor da manutenção</button>
+            </form>
+            <button id="whatsappButton" style="display: none">Conversar pelo WhatsApp</button>
+            <div id="price"></div>
+
+            <script src="./JS/manutencao_elo.js"></script>
         </main>
     </div>
 

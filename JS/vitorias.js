@@ -60,7 +60,7 @@ function calcularVitorias() {
 
     whatsappButton.style.display = 'block';
 
-    const message = `Opa! Quero contratar o serviço de compra de vitórias. O meu elo é ${eloAtualText} e quero ${quantidadeVitoriasText} vitória(s) no valor de: R$${vitoriasPrice.toFixed(2)}.`;
+    const message = `Opa! Quero contratar o serviço de compra de vitórias. O meu elo atual é ${eloAtualText} e quero ${quantidadeVitoriasText} vitória(s) no valor de: R$${vitoriasPrice.toFixed(2)}.`;
     const encodedMessage = encodeURIComponent(message);
     whatsappButton.onclick = function() {
         window.open(`https://wa.me/5516997486526?text=${encodedMessage}`, '_blank');
