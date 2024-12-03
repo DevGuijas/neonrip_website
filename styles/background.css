@@ -6,6 +6,7 @@
     height: 100vh;
     touch-action: none;
     pointer-events: none;
+    background-size: cover;
 }
 
 #background video {
