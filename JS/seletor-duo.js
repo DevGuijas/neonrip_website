@@ -45,7 +45,7 @@ selectUltimoElo.addEventListener("change", (e) => {
     elos.forEach((item) => {
 
         if(item.value === valorSelecionado) {
-            ultimoElo.setAttribute("src", `../assets/${item.label.split(' ')[0]}.png`);
+            ultimoElo.setAttribute("src", `./assets/${item.label.split(' ')[0]}.png`);
             ultimoElo.setAttribute("alt", item.label);
         }
     })
@@ -59,10 +59,10 @@ eloDesejadoSelect.addEventListener("change", (e) => {
 
         if(item.value === valorSelecionado) {
             if(valorSelecionado == 29) {
-                eloDesejadoImg.setAttribute("src", `../assets/${item.label}.png`);
+                eloDesejadoImg.setAttribute("src", `./assets/${item.label}.png`);
                 eloDesejadoImg.setAttribute("alt", item.label);
             } else {
-                eloDesejadoImg.setAttribute("src", `../assets/${item.label.split(' ')[0]}.png`);
+                eloDesejadoImg.setAttribute("src", `./assets/${item.label.split(' ')[0]}.png`);
                 eloDesejadoImg.setAttribute("alt", item.label);
             }
 
