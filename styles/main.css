@@ -84,3 +84,7 @@ main {
     background: transparent;
     border: 1px solid var(--red);
 }
+
+.button_page {
+    padding-right: 1rem;
+}

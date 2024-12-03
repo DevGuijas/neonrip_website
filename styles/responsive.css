@@ -1,4 +1,4 @@
-@media screen and (max-width: 1479px) {
+@media screen and (max-width: 720px) {
 
     /* Classes gerais */
     .main_page_workspace {
@@ -14,7 +14,8 @@
     }
 
     .button_page {
-        display: block;
+        display: flex;
+        
     }
 
     .logo_img {
@@ -24,6 +25,5 @@
     /* Cabeçalho */
     .navigation, .navigation_social {
         display: none;
-
     }
 }

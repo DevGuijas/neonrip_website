@@ -6,6 +6,8 @@ header {
     width: 100%;
     max-width: 1440px;
     padding-top: 24px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 header img {
