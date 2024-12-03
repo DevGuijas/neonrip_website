@@ -20,6 +20,12 @@
     margin-bottom: 40px;
 }
 
+#md5 h2 {
+    padding-bottom: 4vh;
+    color: red;
+    font-size: 2vh;
+}
+
 #md5 label {
     text-align: center;
     font-size: 20px;
