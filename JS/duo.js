@@ -12,8 +12,31 @@ const jobType = document.getElementById('jobType');
 const whatsappButton = document.getElementById('whatsappButton');
 
 document.getElementById('submit').addEventListener('click', () => calcularPreco(1));
+document.getElementById("eloAtual").addEventListener("change", atualizarEloDesejado);
 
 let firstCalculation = true; // Variável para controlar a primeira chamada
+
+function atualizarEloDesejado() {
+    const eloAtual = parseInt(document.getElementById("eloAtual").value);
+    const eloDesejadoSelect = document.getElementById("eloDesejado");
+
+    // Obtém todas as opções de eloDesejado
+    const options = eloDesejadoSelect.options;
+
+    // Percorre as opções, mostrando ou ocultando conforme necessário
+    for (let i = 0; i < options.length; i++) {
+        if (parseInt(options[i].value) <= eloAtual) {
+            options[i].style.display = "none"; // Oculta opções iguais ou inferiores
+        } else {
+            options[i].style.display = "block"; // Mostra opções superiores
+        }
+    }
+
+    // Ajusta o valor de eloDesejado caso esteja em um valor inválido
+    if (parseInt(eloDesejadoSelect.value) <= eloAtual) {
+        eloDesejadoSelect.value = "";
+    }
+}
 
 function calcularPreco(t) {
     const eloTierPrice = [
@@ -45,6 +68,11 @@ function calcularPreco(t) {
         } else {
             jobPrice += eloTierPrice[i];
         }
+    }
+
+    if (jobPrice === 0) {
+        alert("O seu elo desejado precisa ser maior do que o seu elo atual.");
+        return;
     }
 
     document.getElementById("price").innerText = `Preço: R$ ${jobPrice.toFixed(2)}`;

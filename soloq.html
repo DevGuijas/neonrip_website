@@ -147,8 +147,8 @@
             <h1>Preço do EloJob</h1>
             <form id="elojobForm">
                 <label for="eloAtual">Elo Atual:</label>
-                <img class="elo-img" src="./assets/Ferro.png" alt="ferro">
-                <select id="eloAtual" class="elo-select">
+                <img class="elo-img" id="eloDesejadoImg" src="./assets/Ferro.png" alt="ferro">
+                <select id="eloAtual" class="elo-select" onchange="updateEloImage()">
                     <option value="0">Ferro 4</option>
                     <option value="1">Ferro 3</option>
                     <option value="2">Ferro 2</option>
@@ -182,7 +182,7 @@
                 </select>
                 <label for="eloDesejado">Elo Desejado:</label>
                 <img class="elo-img" id="elo-desejado-img" src="./assets/Ferro.png" alt="ferro">
-                <select id="eloDesejado">
+                <select id="eloDesejado" onchange="updateEloImage()">
                     <option value="0">Ferro 4</option>
                     <option value="1">Ferro 3</option>
                     <option value="2">Ferro 2</option>
@@ -221,6 +221,7 @@
             <div id="price"></div>
 
             <script src="./JS/soloq.js"></script>
+            <script src="./JS/updateEloImage.js"></script>
         </main>
     </div>
 
