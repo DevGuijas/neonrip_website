@@ -17,6 +17,10 @@ header img {
   height: auto;
 }
 
+.main_page_workspace img {
+  width: 500px;
+}
+
 .navigation {
   display: flex;
   align-items: center;
