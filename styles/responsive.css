@@ -6,16 +6,17 @@
     }
 
     .main_page_workspace img {
-        width: 400px;
+        width: 300px;
+        /*padding-right: 80px;*/
     }
 
     .main__info p {
-       padding: 20px;
+        padding: 20px;
     }
 
     .button_page {
         display: flex;
-        
+
     }
 
     .logo_img {
@@ -28,8 +29,11 @@
         height: 100%;
         object-fit: cover;
     }
+
     /* Cabeçalho */
-    .navigation, .navigation_social {
+    .navigation,
+    .navigation_social {
         display: none;
     }
+
 }
