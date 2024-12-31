@@ -1,11 +1,11 @@
-const ironTierPrice = [8, 14.3];
-const bronzeTierPrice = [9.5, 16.2];
-const silverTierPrice = [12.5, 19.3];
-const goldTierPrice = [15.1, 23.2];
-const platinumTierPrice = [21.2, 35.3];
-const emeraldTierPrice = [40.2, 72.2];
-const diamondTierPrice = [70.10, 179.5];
-const masterTierPrice = [540];
+const ironTierPrice = [8];
+const bronzeTierPrice = [9.5];
+const silverTierPrice = [12.5];
+const goldTierPrice = [16.1];
+const platinumTierPrice = [23.2];
+const emeraldTierPrice = [46.0];
+const diamondTierPrice = [70.0, 75.0, 80.0, 95.0]; // Preços personalizados para cada divisão do Diamante
+const masterTierPrice = [550];
 const gmmasterTierPrice = [830];
 
 const jobType = document.getElementById('jobType');
@@ -20,19 +20,16 @@ function atualizarEloDesejado() {
     const eloAtual = parseInt(document.getElementById("eloAtual").value);
     const eloDesejadoSelect = document.getElementById("eloDesejado");
 
-    // Obtém todas as opções de eloDesejado
     const options = eloDesejadoSelect.options;
 
-    // Percorre as opções, mostrando ou ocultando conforme necessário
     for (let i = 0; i < options.length; i++) {
         if (parseInt(options[i].value) <= eloAtual) {
-            options[i].style.display = "none"; // Oculta opções iguais ou inferiores
+            options[i].style.display = "none";
         } else {
-            options[i].style.display = "block"; // Mostra opções superiores
+            options[i].style.display = "block";
         }
     }
 
-    // Ajusta o valor de eloDesejado caso esteja em um valor inválido
     if (parseInt(eloDesejadoSelect.value) <= eloAtual) {
         eloDesejadoSelect.value = "";
     }
@@ -40,34 +37,27 @@ function atualizarEloDesejado() {
 
 function calcularPreco(t) {
     const eloTierPrice = [
-        ironTierPrice[t], ironTierPrice[t], ironTierPrice[t], ironTierPrice[t],
-        bronzeTierPrice[t], bronzeTierPrice[t], bronzeTierPrice[t], bronzeTierPrice[t],
-        silverTierPrice[t], silverTierPrice[t], silverTierPrice[t], silverTierPrice[t], 
-        goldTierPrice[t], goldTierPrice[t], goldTierPrice[t], goldTierPrice[t], 
-        platinumTierPrice[t], platinumTierPrice[t], platinumTierPrice[t], platinumTierPrice[t], 
-        emeraldTierPrice[t], emeraldTierPrice[t], emeraldTierPrice[t], emeraldTierPrice[t], 
-        diamondTierPrice[t], diamondTierPrice[t], diamondTierPrice[t], diamondTierPrice[t],
-        masterTierPrice[t],
-        gmmasterTierPrice[t], 0
+        ...Array(4).fill(ironTierPrice[0]),
+        ...Array(4).fill(bronzeTierPrice[0]),
+        ...Array(4).fill(silverTierPrice[0]),
+        ...Array(4).fill(goldTierPrice[0]),
+        ...Array(4).fill(platinumTierPrice[0]),
+        ...Array(4).fill(emeraldTierPrice[0]),
+        diamondTierPrice[0], // Diamante 4 para 3
+        diamondTierPrice[1], // Diamante 3 para 2
+        diamondTierPrice[2], // Diamante 2 para 1
+        diamondTierPrice[3], // Diamante 1 para Mestre
+        masterTierPrice[0],
+        gmmasterTierPrice[0], 0
     ];
 
     const eloAtual = parseInt(document.getElementById("eloAtual").value);
     const eloDesejado = parseInt(document.getElementById("eloDesejado").value);
-  
+
     let jobPrice = 0;
-    
+
     for (let i = eloAtual; i < eloDesejado; i++) {
-        if (i === 24) {
-            jobPrice += eloTierPrice[i];
-        } else if (i === 25) {
-            jobPrice += eloTierPrice[i] * 1.005;
-        } else if (i === 26) {
-            jobPrice += eloTierPrice[i] * 1.01;
-        } else if (i % 4 === 3) {
-            jobPrice += eloTierPrice[i] * 1.05;
-        } else {
-            jobPrice += eloTierPrice[i];
-        }
+        jobPrice += eloTierPrice[i];
     }
 
     if (jobPrice === 0) {
@@ -76,17 +66,15 @@ function calcularPreco(t) {
     }
 
     document.getElementById("price").innerText = `Preço: R$ ${jobPrice.toFixed(2)}`;
-  
+
     whatsappButton.style.display = 'block';
 
-    // Pega o texto da opção selecionada
-    const eloAtualText = document.getElementById("eloAtual").selectedOptions[0].text; // Texto do elo atual
-    const eloDesejadoText = document.getElementById("eloDesejado").selectedOptions[0].text; // Texto do elo desejado
+    const eloAtualText = document.getElementById("eloAtual").selectedOptions[0].text;
+    const eloDesejadoText = document.getElementById("eloDesejado").selectedOptions[0].text;
 
-    // Atualiza o link do WhatsApp
     const message = `Opa! Quero contratar o serviço de SoloBoost. Meu elo atual é: ${eloAtualText} e quero chegar ao ${eloDesejadoText} no valor de: R$${jobPrice.toFixed(2)}`;
     const encodedMessage = encodeURIComponent(message);
-    whatsappButton.onclick = function() {
+    whatsappButton.onclick = function () {
         window.open(`https://wa.me/5516997486526?text=${encodedMessage}`, '_blank');
     };
 }
